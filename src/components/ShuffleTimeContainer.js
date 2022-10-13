@@ -166,7 +166,7 @@ const ShuffleTimeContainer = (props) => {
     return (
         <div>
             <div className="student-container">
-                <h1>List of Attendeess</h1>
+                <h1>List of Attendeesss</h1>
                 <Form onSubmit={handleTableGeneration} onReset={handleClear}>
                     <Container>
                         <Row>
