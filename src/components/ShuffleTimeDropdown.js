@@ -18,7 +18,7 @@ const ShuffleTimeDropdown = (props) => {
         <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label># of Tables</Form.Label>
             <Form.Control as="select" custom onChange={updateTableNumber}>
-                <option value="1">11</option>
+                <option value="1">111</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
