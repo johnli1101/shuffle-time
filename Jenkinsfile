@@ -1,25 +1,28 @@
-pipeline {
+pipeline { 
     agent any
+    
+    options {
+        skipStagesAfterUnstable()
+    }
+    
+    tools {
+        nodejs 'NodeJS'
+    }
     stages {
-        stage('Stage 1: git clone') {
-            steps {
-               bat "rmdir  /s /q shuffle-time"
-                bat "git clone https://github.com/johnli1101/shuffle-time.git"
+        stage('Stage 1: Cloning Repo') { 
+            steps { 
+                echo 'stage one here'
+                sh 'npm install'
             }
         }
-        stage('Stage 2: testing') {
+        stage('Stage 2'){
             steps {
-                bat "mvn install -f TicketBookingServiceJunitTesting"
+                echo 'stage two here'
             }
         }
-        stage('test') {
+        stage('Stage 3') {
             steps {
-                bat "mvn test -f TicketBookingServiceJunitTesting"
-            }
-        }
-        stage('package') {
-            steps {
-                bat "mvn package -f TicketBookingServiceJunitTesting"
+                echo 'stage three here'
             }
         }
     }
