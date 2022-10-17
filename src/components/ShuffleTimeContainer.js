@@ -20,7 +20,7 @@ const ShuffleTimeContainer = (props) => {
     // const [finalList, setFinalList] = useState([]);
     // const [editMode, setEditMode] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-    //hello
+    const newVariable = "";
 
     useEffect(() => {
         db.collection("shuffle").doc("shuffle-time-table")
